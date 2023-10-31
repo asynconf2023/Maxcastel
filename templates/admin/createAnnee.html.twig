@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une année de fabrication{% endblock %}
+
+{% block body %}
+
+<main id="page-createAnnees">
+
+    <h1>Ajouter une année de fabrication</h1>
+
+    {{ form_start(formAnnee) }}
+
+    {{ form_widget(formAnnee) }}
+
+    {{ form_end(formAnnee) }}
+
+</main>
+
+{% endblock %}

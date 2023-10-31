@@ -1,0 +1,26 @@
+#page-voituresType-admin table td:nth-of-type(-n+2) a{
+    width: 100%;
+    display: block;
+    align-items: center;
+}
+
+#page-voituresType-admin i{
+    font-size: 18px;
+}
+
+#page-voituresType-admin ul li:nth-child(1) i{
+    color: rgb(45, 45, 45);
+}
+
+#page-voituresType-admin ul li:nth-child(2) i{
+    color: rgb(76, 76, 184);
+}
+
+#page-voituresType-admin ul li:nth-child(3) i{
+    color: #c74848;
+}
+
+#page-index form{
+    width: 40%;
+    margin-left: 15px;
+}

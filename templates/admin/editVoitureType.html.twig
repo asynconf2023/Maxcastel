@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{# {% form_theme formCreerCroquette 'bootstrap_5_layout.html.twig' %} #}
+
+{% block body %}
+
+  <main id="page-edit-VoitureType">
+
+    <h1 class="titre-h1">Modifier la voiture de type <span>{{ voitureType.nom }}</span></h1>
+
+    {# {{ dump(voitureType) }} #}
+
+    {{ form_start(formVoitureType) }}
+
+    {{ form_widget(formVoitureType) }}
+
+    {{ form_end(formVoitureType) }}
+
+  </main>
+
+{% endblock %}

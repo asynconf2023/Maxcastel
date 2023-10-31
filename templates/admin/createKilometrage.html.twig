@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un type de kilométrage{% endblock %}
+
+{% block body %}
+
+<main id="page-createKilometrages">
+
+    <h1>Ajouter un type de kilométrage</h1>
+
+    {{ form_start(formKilometrage) }}
+
+    {{ form_widget(formKilometrage) }}
+
+    {{ form_end(formKilometrage) }}
+
+</main>
+
+{% endblock %}

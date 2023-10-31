@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un type de carburant{% endblock %}
+
+{% block body %}
+
+<main id="page-createCarburantType">
+
+    <h1>Ajouter un type de carburant</h1>
+
+    {{ form_start(formCarburantType) }}
+
+    {{ form_widget(formCarburantType) }}
+    
+    {{ form_end(formCarburantType) }}
+
+</main>
+
+{% endblock %}

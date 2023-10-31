@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter des passagers{% endblock %}
+
+{% block body %}
+
+<main id="page-createPassagers">
+
+    <h1>Ajouter des passagers</h1>
+
+    {{ form_start(formPassager) }}
+
+    {{ form_widget(formPassager) }}
+
+    {{ form_end(formPassager) }}
+
+</main>
+
+{% endblock %}

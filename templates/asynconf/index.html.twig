@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AsynconfController!{% endblock %}
+
+{% block body %}
+
+<main id="page-index">
+
+    <h1>Calculer le taux d'empreint pour l'achat d'un véhicule</h1>
+
+    <form action="" method="POST">
+
+    <h2>Type de véhicule</h2>
+      <div class="form-group">
+        <label for="nom">Nom :</label>
+        <select name="nom" id="nom">
+            {% for voitureType in voituresType %}
+                <option value="{{ voitureType.id }}">{{ voitureType.nom }}</option>
+            {% endfor %}
+        </select>
+      </div>
+
+    <h2>Type de carburant</h2>
+      <div class="form-group">
+        <label for="nomc">Nom :</label>
+        <select name="nomc" id="nomc" class="form-control">
+            {% for carburantType in carburantsType %}
+                <option value="{{ carburantType.nom }}">{{ carburantType.nom }}</option>
+            {% endfor %}
+        </select>
+      </div>
+
+    <h2>Kilometrage</h2>
+      <div class="form-group">
+        <label for="km">Nombre de kilomètres par an (en milliers) :</label>
+        <select name="km" id="km" class="form-control">
+            {% for kilometrage in kilometres %}
+                    <option value="{{ kilometrage.minKmParAn }}-{{ kilometrage.maxKmParAn }}">{{ kilometrage.minKmParAn }}-{{ kilometrage.maxKmParAn }}</option>
+            {% endfor %}
+        </select>
+      </div>
+
+    <h2>Année</h2>
+      <div class="form-group">
+        <label for="annee">Année du véhicule :</label>
+        <select name="annee" id="annee" class="form-control">
+            {% for an in annees %}
+                {% if an.minDate ~ '-' ~ an.maxDate == "2010-1" %}
+                    <option value="2021">Après 2021</option>
+                {% else %}
+                    <option value="{{ an.minDate }}-{{ an.maxDate }}">{{ an.minDate }}-{{ an.maxDate }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+      </div>
+
+    <h2>Passagers</h2>
+      <div class="form-group">
+        <label for="passagers">Nombre de passagers :</label>
+        <select name="passagers" id="passagers" class="form-control">
+            {% for passager in passagers %}
+                <option value="{{ passager.nbDePassagers }}">{{ passager.nbDePassagers }}</option>
+            {% endfor %}
+        </select>
+      </div>
+
+      <input class="btn btn-primary" type="submit" id="btn-creer" value="Calculer mon taux d'empreint" name="creer">
+    
+    </form>
+
+
+</main>
+
+{% endblock %}

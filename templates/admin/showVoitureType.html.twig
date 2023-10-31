@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CroquetteController!{% endblock %}
+
+{% block body %}
+    <main id="page-show-voitureType">
+    
+    <div class="text-center titre-et-btn-create">
+        <h1 class="titre-h1">Informations sur la voiture de type <span>{{ voitureType.nom }}</h1>
+        <a class="text-decoration-none text-dark" href="{{ path('voituresType') }}"><i class="fa-solid fa-arrow-left"></i>Voir tous les types de voitures</a>
+    </div> 
+    {# {{ dump(voitureType) }} #}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Poids minimum</th>
+                    <th>Poids maximum</th>
+                    <th>Note eco</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ voitureType.nom }}</td>
+                    <td>{{ voitureType.minKg }}kg</td>
+                    <td>{{ voitureType.maxKg }}kg</td>
+                    <td>{{ voitureType.noteEco }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+{% endblock %}

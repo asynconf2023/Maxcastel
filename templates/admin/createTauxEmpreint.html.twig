@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un taux d'empreinte{% endblock %}
+
+{% block body %}
+
+<main id="page-createTauxEmpreint">
+
+    <h1>Ajouter un taux d'empreinte</h1>
+
+    {{ form_start(formTauxEmpreint) }}
+
+    {{ form_widget(formTauxEmpreint) }}
+
+    {{ form_end(formTauxEmpreint) }}
+
+</main>
+
+{% endblock %}
